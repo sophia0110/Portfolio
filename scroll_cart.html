@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>購物車價格加總</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <style>
+        .wrapper {
+            max-width: 640px;
+            margin: 40px auto;
+        }
+        body{
+        height: 300vh;
+      }
+      .progress-con{
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 30px;
+          background-color: cornsilk;
+
+      }
+      .progress-precent{
+          height: 30px;
+          background: pink;
+          width: 0%;
+      }
+        
+    </style>
+</head>
+
+<body>
+
+    
+    
+    <div class="wrapper ">
+
+      <h1>購物車價格加總及視窗進度條</h1>  
+        <br>
+        <a href="index.html"><button type="button" class="btn btn-primary" >回到首頁</button></a> 
+       <hr>
+        <div class="progress-con">
+            <div class="progress-precent" id="progressPercent"></div>
+        </div>
+        <table class="table table-bordered table-sm">
+            <thead>
+                <tr>
+                    <th>品名</th>
+                    <th>單價</th>
+                    <th width="200px">數量</th>
+                    <th>小計</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>蘋果</td>
+                    <td class="price" >20</td>
+                    <td>
+                        <input type="number" class="form-control number" data-price="20" min="0">
+                    </td>
+                    <td>
+                        <span class="text-right s_price"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>香蕉</td>
+                    <td class="price" >16</td>
+                    <td>
+                        <input type="number" class="form-control number" data-price="16" min="0">
+                    </td>
+                    <td>
+                        <span class="text-right s_price"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>芭樂</td>
+                    <td class="price" >20</td>
+                    <td>
+                        <input type="number" class="form-control number" data-price="20" min="0">
+                    </td>
+                    <td>
+                        <span class="text-right s_price"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>葡萄</td>
+                    <td class="price" >30</td>
+                    <td>
+                        <input type="number" class="form-control number" data-price="30" min="0">
+                    </td>
+                    <td>
+                        <span class="text-right s_price"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>奇異果</td>
+                    <td class="price" >15</td>
+                    <td>
+                        <input type="number" class="form-control number" data-price="15" min="0">
+                    </td>
+                    <td>
+                        <span class="text-right s_price"></span>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4" class="text-right">
+                        總價:
+                        <span id="total">0</span>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <!-- container -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <script>
+           let pageHeight=$("body").height();
+      let windowHeight=$(window).height();
+      $(window).scroll(function(){
+          let scrollTop=$(this).scrollTop();
+          let percent=Math.round((scrollTop/(pageHeight-windowHeight))*100)+"%";
+          console.log(percent)
+          $("#progressPercent").css("width", percent)
+      })
+            countPrice();
+        $(".number").on("change keyup" ,function(){
+            countPrice()
+
+        })
+        function countPrice(){
+            let total=0;
+
+         
+            $("tbody tr").each(function(){
+                let productRow=$(this);
+                // console.log(productRow)
+                let amount=Number(productRow.find(".number").val());
+                // console.log(amount)
+                // let price=Number(productRow.find(".price").text());
+                let price=Number(productRow.find(".number").data("price"));
+                //data-price綁在input
+                // console.log(price)
+                let subtotal=price*amount;
+                productRow.find(".s_price").text(subtotal)
+                // console.log(subtotal)
+                // let total="";
+                total+=subtotal;
+                
+                console.log(total)
+
+
+            })
+
+                $("#total").text(total);
+                console.log(total)
+
+
+        } ;
+                
+
+        
+            
+           
+             
+        
+    </script>
+</body>
+
+</html>
