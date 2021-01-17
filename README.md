@@ -1,3 +1,3 @@
-# jQuery-game
-## sophia的 jquery 小遊戲作品集
-## github pages: https://sophia0110.github.io/jQuery-game/
+# 作品集
+## sophia的 作品集
+## github pages:
