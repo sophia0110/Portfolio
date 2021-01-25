@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>作業</title>
+    <title>美髮網站切版</title>
     <style>
         * {
             box-sizing: border-box;
@@ -47,14 +47,13 @@
             margin: 0 auto;
         }
 
-        /* .main-header .d-flex {
-            justify-content: space-around;
-        } */
+  
 
         .logo {
             /* background: rosybrown; */
             /* width: 200px; */
             height: 70px;
+            align-items: center;
         }
 
 
@@ -103,36 +102,24 @@
             justify-content: center;
             align-items: center;
 
-            /* padding: 10px; */
-            /* flex-direction: row; */
-
-            /* float: auto; */
-            /* align-items: flex-end; */
-            /* overflow: hidden; */
-            /* position:absolute; */
 
         }
 
         .logomin {
-            /* padding: 0 auto;
-            margin: o auto; */
+  
             padding:5px;
             width: 150px;
             height: 150px;
             justify-content: center;
-            /* align-items: flex-end; */
+     
 
 
         }
 
         .text {
-            /* position: relative; */
+
             flex-direction: column;
-            /* align-items: flex-end; */
-            /* align-items: center; */
 
-
-            
         }
 
         .li1{
@@ -142,6 +129,9 @@
 
 
         }
+        .in{
+            margin-right:8px ;
+        }
 
         .btn{
             background:palevioletred;
@@ -150,21 +140,24 @@
             border:1px solid palevioletred;
             text-align: center;
             color: #ffffff;
+            margin-bottom:8px ;
         }
 
-        /* .nav2{
-            padding: 0;
-            margin: 0;
-            
-        } */
+        .btn:hover{
+            background:rgb(245, 42, 110);
+      
+            border:1px solid rgb(241, 58, 119);
+            /* opacity: 0.8; */
+         
+        }
+
+
         .nav2 ul{
             list-style: none;
             justify-content: space-around;
         }
 
-        /* .box3{
-            justify-content: space-around;
-        } */
+
         .theme {
             width: 100%;
             padding: 10px;
@@ -179,6 +172,12 @@
 
         .box3 {
             background: #999999;
+        }
+
+        .theme:hover{
+            opacity: 0.5;
+            
+
         }
 
        
@@ -201,7 +200,22 @@
             background: #999999;;
             text-align: center;
         }
+        .footer2{
+            color:#ffff;
+            background-color: black;
+        }
+        @media screen and (max-width:768px){
+        
+            a
+        {
+            color: black;
+    
+            font-size:0.1em;
+            
+        }
 
+  
+   }
       
 
     </style>
@@ -224,8 +238,8 @@
                 </nav>
 
                 <div class="warpper d-flex flex-center ">
-                    <a href="">註冊</a>
-                    <a href="">登入</a>   
+                    <a href="" class="in">註冊</a>
+                    <a href="" class="in">登入</a>   
                 </div>
                 <img src="pics_1129/setting.png" alt="">
 
@@ -243,14 +257,19 @@
                         <h1 class="warpper ">煩惱髮型嗎?</h1>
                         <h3 class="warpper ">給你最多髮型靈感及在地優美設計師</h3>
                         <div class="nav1">
-                            <ul class=" warpper d-flex flex-center  ">
-                            <li class="li1">
+                            <ul class=" warpper d-flex flex-center ">
+                            <li class="li1 ">
+                                
                                 找地點
                             </li>
-                            <li class="li1">
-                                收尋髮型主題
+                            <li class="li1 ">
+                           
+                                  收尋髮型主題   
+                         
+                            
+                                
                             </li>
-                            <li class="li1">
+                            <li class="li1 ">
                               <a class="warpper btn " href="">去逛逛</a>  
                             </li>
                         </ul>
@@ -259,9 +278,34 @@
                         
                         
                             <ul class="warpper box2 d-flex ">
-                                <li><img src="pics_1129/icon_search.png" alt="">在地設計師作品輕鬆找</li>
-                                <li><img src="pics_1129/icon_fashion.png" alt="">流行髮型一手掌握</li>
-                                <li><img src="pics_1129/icon_book.png" alt="">即時溝通預約</li>
+                                <li class=" ">
+                                    <li>
+                                      <img src="pics_1129/icon_search.png" alt="">  
+                                    </li>
+                                    <li>
+                                        <p>
+                                        在地設計師作品輕鬆</p>
+                                    </li>
+                                </li>
+                                <li class=" d-flex row" >
+                                    <li>
+                                        <img src="pics_1129/icon_fashion.png" alt="">  
+                                      </li>
+                                      <li>
+                                          <p>
+                                          流行髮型一手掌握</p>
+                                      </li>
+                                    </li>
+                                <li class=" d-flex row">
+                                    <li>
+                                        <img src="pics_1129/icon_book.png" alt="">  
+                                      </li>
+                                      <li>
+                                          <p>
+                                            即時溝通預約</p>
+                                      </li>
+                                    </li>
+                                    
                             </ul>
                             
                         </div>
@@ -323,8 +367,8 @@
                         <div>
                            <h2>快速找到好髮型</h3>
                         <div class="d-flex ">
-                            <img src="pics_1129/btn_app_ios.png" alt="">
-                            <img src="pics_1129/btn_app_android.png" alt="">  
+                            <img src="pics_1129/btn_app_ios.png" alt="" style="cursor:pointer">
+                            <img src="pics_1129/btn_app_android.png" alt="" style="cursor:pointer">  
                         </div>
                         <h4>
                         下載並註冊後就可以開始發表作品囉!
@@ -344,7 +388,7 @@
     <footer class="warpper"> 
         <article>
          <div class="warpper d-flex flex-center">
-                <img class="longhair" src="images/slide2.jpg" alt="">
+                <!-- <img class="longhair" src="images/slide2.jpg" alt=""> -->
         </div>
 
        <div class=" warpper d-flex flex-center box3">
@@ -356,9 +400,11 @@
 
 
 
+    <div class="footer2">
+         美髮地圖網 hairmap.com
+    </div>
 
-
-        footer 12345468797789
+       
 
     </footer>
 
