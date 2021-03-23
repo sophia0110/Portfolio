@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <style>
+        *{
+            box-sizing: border-box;
+            /* border: 1px solid black; */
+        }
+        body{background: #cccccc;
+            }
+
+        a, a:link{
+            color: #3b5998;
+            text-decoration: none;
+        }
+
+        .warpper{
+            max-width:960px;
+            margin: auto;
+            padding: 0;
+         
+                    }
+        .d-flex{
+                display: flex;            }
+
+        .cover{
+            width: 100%;
+            height: 100%;
+            object-fit:cover;
+          
+        }    
+        
+        
+        .main-header{
+            background: white;
+            padding: 0;
+            }
+        .main-header .d-flex{
+            justify-content: space-between;
+        }
+
+        .fb{
+            height: 48px;
+            /* margin: 5px; */
+
+        }
+
+        .nav1{
+            background: #3b5998;
+            padding: 0;
+        }
+  
+        .nav1 ul{
+            /* margin: 0; */
+            padding: 0;
+            list-style: none;
+
+            
+            
+        }
+        .nav1 li{
+            position: relative;
+            /* padding: 0 */
+        }
+
+        .nav1 li a{
+            color:#ffff;
+            padding: 10px 10px;
+            display:block;
+        }
+        .nav1 li a:hover, .nav1 li.active a{
+            background: #8b9dc3;
+            ;
+        }
+
+        @media screen and (max-width: 768px){
+            .nav1 li{
+                flex:1 0 0;
+                text-align: center;
+            }
+
+            
+        }
+      
+      .left-aside figure{
+          width: 160px;
+          height: 160px;
+          margin: 0 0 10px 0;
+          border-radius: 4px;
+          border:1px solid #777777;
+          overflow: hidden;
+          padding: 5px;
+          }
+
+          .side-nav {
+              /* background: white; */
+              margin: 0;
+              padding: 0;
+              list-style: none;
+          }
+
+          .side-nav li a{
+            color:black;
+            padding: 6px 10px;
+            display:block;
+            border-left:4px solid transparent;
+        }
+
+        .side-nav li a:hover, .side-nav li.active a{
+              background: #ffffff;
+              border-left: 4px solid   #3b5998;
+          }
+
+
+
+        .submenu{
+            position: absolute;
+            background:#3b5998;
+            /* display: none; */
+            transition: .5s;
+            opacity:0;
+            overflow: hidden;
+            max-height: 0;
+            }
+
+        .nav1 li:hover .submenu{
+           display: block;
+           opacity:1;
+           /* height: 150px; */
+           max-height: 150px;
+           
+        }
+        
+        .submenu li a:hover{
+            background: #8b9dc3;   
+        }
+
+        .card{
+            background: #ffffff;
+            border-radius: 4px;
+            border:3px solid #3b5998;
+            padding: 5px;
+            margin: 2px;
+           
+
+        }
+
+        .banner{
+            height: 120px;
+            background: url("images/slide1.jpeg")center center;
+            background-size:cover ;
+            margin-bottom:10PX ;
+
+        }
+
+        /* .p1{
+            width: 200px;
+            height: 300px;
+            background-color: white;
+            padding: 5px;
+        } */
+
+       .right-aside {
+            width: 160px;
+            display: flex;
+            align-items: flex-end;
+            flex-shrink: 0;
+
+       }
+
+       article{
+           flex-grow: 1;
+           margin: 0 10px;
+           min-height: calc(100vh - 100px);
+       }
+
+       article p{
+           line-height: 1.7;
+       }
+
+       @media screen and (max-width:768px){
+        
+            main.d-flex{
+                flex-direction: column;
+            }
+
+
+            .left-aside figure{
+                margin: 0 auto 10px;
+            }
+
+            .side-nav{
+                display: flex;
+            }
+            .side-nav li{
+                flex-direction: row;
+                flex: 1 0 0;
+            }
+
+            .side-nav li a{
+                border-left: none;
+                border-top: 4px solid transparent ;
+            }
+
+            .side-nav li a:hover, .side-nav li.active a{
+                color: #3b5998;
+                border-left: none;
+                border-top: 4px solid #3b5998 ;
+            }
+
+            .banner{
+                background-image:url("images/slide2.jpeg") ;
+            }
+
+            .right-aside img{
+                display: none;
+            }
+       }
+
+       footer{
+            display: flex;
+           justify-content: center;
+           padding: 10px 0;
+           align-items:center  ;}
+
+
+
+
+
+
+        
+
+
+
+    </style>
+</head>
+<body>
+    
+     <header class="main-header">
+        <div class="warpper d-flex">
+         <img class="fb" src="images/facebook.png" alt=""> 
+         <div>
+            <a href="">Log In</a> | <a href="">Sign up</a> 
+        </div>
+        </div>
+    </header>     
+        <nav class="nav1 ">
+            <ul class="warpper d-flex"> 
+                <li class="active"><a href=""> Home
+                </a>
+            </li>
+                <li><a href="" >Product
+                </a>
+                <ul class="submenu">
+                    <li>
+                        <a href="">apple</a>
+                    </li>
+                    <li>
+                        <a href="">apple1</a>
+                    </li>
+                    <li>
+                        <a href="">apple2</a>
+                    </li>
+                    <li>
+                        <a href="">apple3</a>
+                    </li>
+                </ul>
+                </li>
+                <li><a href="" > Story
+                </a>
+                   
+            </li>
+                <li><a href="" > Contact
+                </a>
+                    
+            </li>
+                <li><a href="" > About
+                </a>
+                   
+            </li>
+
+            </ul>
+        </nav>
+        <div class="warpper">
+            <main class="d-flex">
+                <aside class="left-aside">
+                    <figure >
+                         <img class="cover" src="images/logo.jpg" alt="">
+                    </figure>
+
+                    <ul class="side-nav"> 
+                        <li class="active"><a href=""> Home
+                        </a>
+                    </li>
+                        <li><a href="" >Product
+                        </a>
+                            
+                        </li>
+                        <li><a href="" > Story
+                        </a>
+                           
+                    </li>
+                        <li><a href="" > Contact
+                        </a>
+                            
+                    </li>
+                        <li><a href="" > About
+                        </a>
+                           
+                    </li>
+        
+                    </ul>
+                
+
+                </aside>
+                <article class="warpper d-flex" >
+                    <div class="card">
+                        <div class="banner">
+
+                        </div>
+                    <h2>復甦慢！聯合航空Q3虧損超出預期 每天燒2,100萬美元</h2>
+                    <time>2020/10/15 09:37</time>
+
+                   
+
+                    <p >
+                        美國聯合航空(United Airlines)於週三(14日)美股盤後公佈最新財報，因全球航空客運需求持續受疫情影響，第三季虧損超出預期。不過，聯合航空成功撙節費用，大幅降低現金消耗速度，並稱已準備好帶領航空業強勁復甦，盤後股價在平盤之上遊走。
+                       
+                    </p> 
+                    <p>
+                        根據聯合航空公佈的2020年第三季財報，總營收銳減至25億美元，年減78%，其中，客運收入(Passenger revenue)大減84%至16億美元，低於市場預期的17.5億美元；若不計特殊項目，淨損24億美元，即每股虧損8.16美元，遜於FactSet調查所預估的每股虧損7.53美元。  
+                    </p>
+
+                    <P>
+                        截至第三季底，聯合航空擁有的流動現金為194億美元。不計債務和遣散費，第三季平均每日消耗現金2,100萬美元，較第二季日均3,700萬美元明顯下降。聯合航空表示，與2019年第三季相比，已成功削減59%的營運成本，並將對1.3萬名員工實施無薪假。由於等不到二次紓困，聯合航空原計劃於10月1日裁減2,850名機師，藉此節省人事成本。不過，9月28日，聯合航空與機師工會達成勞資協議，旗下機師同意接受減班，而聯合航空承諾在2021年6月前，不對機師實施無薪假。外媒報導指出，航空公司大多盡可能保留機師職位，因為機師訓練成本昂貴且耗時，且機師必須在規定時間內符合起降次數，才能保持飛行執照有效，如果讓機師放無薪假，未來召回必須重新培訓，對公司來說並不划算。
+                    </P>
+
+                
+                </div>
+
+                </article>
+                <aside class="right-aside">
+                    <figure>
+                        <img  src="images/jk.png" alt="">
+                    </figure>
+
+                </aside>
+            </main>
+
+
+        </div>
+
+        <footer>
+            Facebook Inc.
+        </footer>
+
+   
+        
+        
+        
+  
+    
+</body>
+</html>
