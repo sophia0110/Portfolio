@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>小馬快遞遊戲</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="game.css" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <h1>小馬快遞遊戲!一起玩吧!</h1>
+      <h5>
+      遊戲說明:使用前後左右按鍵移動小馬快遞，成功獲得郵件並確實躲避障礙物，成功走完路程，任務完成。
+      </h5>
+      <div class="game">
+       
+         <div class="sky d-flex align-items-end" > 
+          <div class="mountain "> </div>     
+        </div>
+             <div class="background">
+            <div class="player"></div>
+            <div class="mail" id="m1"></div>
+            <div class="stone"></div>
+            <div class="tree"></div>
+            <div class="bucket"></div>
+      </div> 
+      <p>取得郵件數量: <span id="total">0</span></p>
+      </div>
+        
+      <div class="stage-control">
+        <div class="stage-control-start button">
+            開始遊戲
+        </div>
+
+        <!-- <div class="stage-control-reStart button">
+            重新遊戲
+        </div>
+         -->
+    </div> 
+    <br>
+    <a href="https://sophia0110.github.io/Portfolio/" ><button type="button" class="btn btn-primary" >回到首頁</button></a>
+    <a href="https://sophia0110.github.io/Portfolio/ " target="_blank"><button type="button" class="btn btn-secondary" >詳細的code</button></a> 
+    <a href="https://www.google.com/doodles/155th-anniversary-of-the-pony-express" target="_blank"><button type="button" class="btn btn-info" >參考範例</button></a>  
+   <hr>
+    
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+
+var stageControl = $(".stage-control");
+var player = $(".player");
+var gameRun;
+var reStageButton = $(".stage-control-reStart");
+var total =$("#total").val
+// //場景走到尾。即停止。
+function gameEnd() {
+    clearInterval(gameRun); 
+
+    stageControl.show()
+    location.reload();
+};
+
+function gameover() {
+    clearInterval(gameRun); 
+    stageControl.show()
+    location.reload();
+};
+
+  
+
+function playerControl() { //遊戲控制
+    $(".stage-control-start").click(function() {
+      stageControl.hide();
+      gameRun = setInterval(function(){},50);
+        
+    });
+
+};
+playerControl();
+
+//player移動
+function playerMove() {
+      const UP=38;
+      const UP_L=87;
+      const DOWN=40;
+      const DOWN_L=83;
+      const RIGHT=39;
+      const RIGHT_L=68;
+      const LEFT=37;
+      const LEFT_L=57;
+      const SPEED=50;
+    var posX=0;
+    var posY=100;
+    $("body").keydown(function(event){
+      keyCode=event.which;
+      switch(keyCode){
+        case UP:
+        case UP_L:
+          if((posY=parseInt(posY)-SPEED)>=100){
+            $(".player").css("top",posY+"px");
+            // console.log(posY)
+            break;
+          }else{
+            break;
+          } 
+        case DOWN:
+        case DOWN_L:
+        if((posY=parseInt(posY)+SPEED)<=350){
+            $(".player").css("top",posY+"px"); 
+            // console.log(posY)
+            break;
+        }else{
+            break;
+          }
+        case LEFT:
+        case LEFT_L:
+        if((posX=parseInt(posX)-SPEED)>=0){
+            $(".player").css("left",posX+"px");
+            // console.log(posX)
+          break;
+        }else{
+            break;
+          }
+        
+        case RIGHT:
+        case RIGHT_L:
+        if((posX=parseInt(posX)+SPEED)<=1050){
+            $(".player").css("left",posX+"px");
+            // console.log(posX)
+
+          break;
+        }else{
+            break;
+          }
+        default:
+      }
+
+        console.log(posX,posY)
+      
+        function win(){    
+   
+              //撞到障礙物
+             function obstacle1() {
+              var Tree= $(".tree").position();
+                var treeX = parseInt(Tree.left);
+                var treeY = parseInt(Tree.top);
+          
+            // console.log(treeX,treeY)
+                  if(posX == treeX&&posY == treeY){
+                    console.log("失敗")
+                    return gameover();
+                    } else {
+                    return false;
+              }}
+
+              function obstacle2() {
+              var Bucket= $(".bucket").position();
+                var bucketX = parseInt(Bucket.left);
+                var bucketY = parseInt(Bucket.top);
+          
+            // console.log(bucketX,bucketY)
+                  if(posX == bucketX&&posY == bucketY){
+                    alert("Game Over")
+                    console.log("失敗")
+                    return gameover();
+                    } else {
+                    return true;
+              }}
+
+              function obstacle3() {
+              var Stone= $(".stone").position();
+                var stoneX = parseInt(Stone.left);
+                var stoneY = parseInt(Stone.top);
+          
+            // console.log(stoneX,stoneY)
+                  if(posX == stoneX&&posY == stoneY){
+                    alert("Game Over")
+                    console.log("失敗")
+                    return gameover();
+                    } else {
+                    return true;
+              }}
+
+
+              function getmail() {
+
+
+        //取得郵件
+        var arr =[];
+        $(".mail").each(function(){
+            arr.push($(this).position());
+        for(var i=0;i<arr.length;i++){
+          var mail1X=Math.floor(arr[i].left)
+          var mail1Y=Math.floor(arr[i].top)
+               console.log(mail1X,mail1Y);
+            let total = 0;
+             if(posX == mail1X&&posY == mail1Y){
+     
+              $(this).remove();
+              console.log("取得郵件")
+              total++
+               console.log("total:",total)
+               $("#total").text(parseInt(total));
+                return true; 
+                }else {
+                return false;
+                }
+
+        }       
+        
+
+
+
+        })
+        console.log(arr);
+
+
+        
+   
+         
+         
+              var Mail= $(".mail").position();
+              if(Mail!==undefined){
+               var mailX = parseInt(Mail.left);
+                var mailY = parseInt(Mail.top); 
+              }else{
+                return
+              } 
+               
+              
+            console.log(mailX,mailY)
+
+            
+            let total = 0;
+             if(posX == mailX&&posY == mailY){
+             $(".mail").each(function() {
+              $(this).remove();
+              
+              console.log("取得郵件")
+              total++
+               console.log("total:",total)
+               $("#total").text(parseInt(total));
+                return true; })
+                }else {
+                return false;
+                }  
+                 
+                          
+       
+              
+                      }
+
+
+              Promise.all([getmail(),obstacle1(),obstacle2(),obstacle3()])
+              var all=$("#total").text()
+
+             if(posX>1050 && all>0){
+        
+                         console.log(all)
+                         console.log("posX:",posX,"total:" ,all)
+                           alert("成功送達終點")
+                 ;
+
+
+                         return gameEnd();
+                           }else if(posX>1050 && all==0){
+                            alert("未取得郵件任務失敗")
+                             return gameEnd();
+                           }else{
+                            return
+                           }
+                 console.log("total:",total)
+            }
+            win();
+    }
+    ); 
+ 
+
+
+
+  }
+
+playerMove();
+
+
+  
+
+    
+  </script>
+  </body>
+</html>

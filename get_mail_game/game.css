@@ -1,0 +1,126 @@
+.game {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.sky {
+  height: 100px;
+  width: 100%;
+  background-image: url(images/images/sky.jpg);
+  animation: backgroundplay 5s steps(5) infinite;
+  -webkit-animation: backgroundplay 5s steps(5) infinite;
+}
+.mountain {
+  height: 40px;
+  width: 100%;
+  background-image: url(images/images/mountain.png);
+  animation: play 5s steps(5) infinite;
+  -webkit-animation: play 5s steps(5) infinite;
+}
+.background {
+  height: 304px;
+  width: 100%;
+  background-image: url(images/images/ground.jpg);
+  animation: backgroundplay 3s steps(5) infinite;
+  -webkit-animation: backgroundplay 3s steps(5) infinite;
+}
+.background:hover {
+  animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+}
+
+.player {
+  width: 69px;
+  height: 59px;
+  background-image: url(images/images/player.png);
+  animation: play 5s steps(17) infinite;
+  -webkit-animation: play 5s steps(17) infinite;
+  position: absolute;
+  left: 0;
+  top: 100px;
+  transform-origin: left top;
+}
+
+.player:hover {
+  animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+}
+
+@keyframes backgroundplay {
+  100% {
+    background-position: 1176px;
+  }
+}
+
+@keyframes play {
+  100% {
+    background-position: -1176px;
+  }
+}
+
+.mail {
+  height: 25px;
+  margin: 20px;
+  width: 35px;
+  background-image: url(images/images/mail.png);
+  /* left: 300px; */
+  position: absolute;
+}
+#m1 {
+  left: 300px;
+}
+
+.stone {
+  height: 30px;
+  width: 105px;
+  background-image: url(images/images/stone.png);
+  position: absolute;
+  left: 200px;
+  top: 150px;
+}
+
+.tree {
+  height: 70px;
+  width: 94px;
+  background-image: url(images/images/tree.png);
+  position: absolute;
+  left: 100px;
+  top: 301px;
+}
+.bucket {
+  height: 54px;
+  width: 82px;
+  background-image: url(images/images/bucket.png);
+  position: absolute;
+  left: 250px;
+  top: 250px;
+}
+
+.stage-control {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 20%;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 20;
+  background: rgba(0, 0, 0, 0.65);
+}
+.stage-control .button {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 30%;
+  border-radius: 20px;
+  font: 50px;
+  color: #707070;
+  border: 1px solid #707070;
+  background: #fff;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.stage-control .button:hover {
+  color: #000;
+  background: #707070;
+}
