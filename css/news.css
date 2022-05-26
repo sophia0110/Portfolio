@@ -1,0 +1,133 @@
+.tabText {
+  outline: none;
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#tab > li {
+  border-bottom: 1px solid #c4c4c4;
+}
+.tabText:hover {
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+li a {
+  color: #6b6767;
+}
+
+.fas {
+  margin-right: 5px;
+  cursor: pointer;
+}
+.nav-tabs {
+  border-bottom: none;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover {
+  cursor: default;
+  border-bottom-color: transparent;
+  border-bottom: 4px solid #ceb055;
+  /* padding-bottom:2px; */
+}
+
+.nav-tabs > li > a {
+  color: #000;
+}
+
+.nav > li > a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  width: 240px;
+}
+
+.btnstyle {
+  width: 35px;
+  height: 35px;
+  background-color: #6b6767;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  padding: 2px 0px 2px 6px;
+}
+.btnicon {
+  font-size: 17px;
+  color: white;
+  align-items: center;
+}
+.card {
+  margin-top: 10px;
+  width: 225px;
+  height: 240px;
+}
+.cardImg {
+  height: 180px;
+}
+.cardtitle {
+  background-color: #6b6767;
+  color: white;
+  margin-bottom: 20px;
+}
+.cardContent {
+  text-align: left;
+  margin-left: 15px;
+}
+.cardContent > p {
+  width: 200px;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2; /*行數*/
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+
+.listCard {
+  margin: 25px 0;
+  height: 140px;
+  width: 700px;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+}
+.listCardImg {
+  width: 240px;
+  height: 140px;
+}
+.listCardtitle {
+  background-color: #6b6767;
+  color: white;
+  margin: 10px 0;
+  text-align: center;
+}
+.listCardContent {
+  text-align: left;
+  margin-left: 25px;
+  align-items: center;
+}
+
+.listCardContent > p {
+  width: 400px;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2; /*行數*/
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+
+/* 2021/12/17 修改 */
+.customPrevBtn,
+.customNextBtn {
+  background-color: #c4c4c4;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin: 10px;
+  color: white;
+}

@@ -8,12 +8,21 @@
   
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
- 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" media="screen" />
+    <link rel="stylesheet" href="./owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="./owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./css/news.css" media="screen" />
 <style>
   .img0{
-    width: 500px;
-    height: 220px;
+    width: 40vw;
+    height: 20vw;
   }
+  .projectImg{
+    width: 16vw;
+    height: 10vw;
+
+  }
+  
   /* *{
     border: 1px solid red;
   } */
@@ -47,12 +56,6 @@
             <li class="nav-item active">
               <a class="nav-link" href="#">Home <span class="sr-only">Sophia 作品集</span></a>
             </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="#">RWD</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">JQuery</a>
-            </li> -->
          
 
         </div>
@@ -62,36 +65,73 @@
     <article>
       <div class="container">
         <div class="position-relative overflow-hidden  m-md-3 text-center bg-light ">
-          <div class="d-flex m-md-5  ">
+          <div class="d-flex m-md-5">
               <!-- <div class="myphoto d-flex align-items-center" >
               <img src="images/sophia.jpg" class=" myphoto2"  >
             </div> -->
-            <div class="col-md-8  mx-auto my-8">
+            <div class="col-md-8 mx-auto my-8" >
               <h1 class="fw-normal">歡迎來到</h1>
             <h1 class="fw-normal">蘇玟菁(Sophia)的作品集</h1>
             <p class="lead fw-normal">
               <ul class="list">
                 <li>經歷:中壢資策會-前端工程師就業養成班(APR. 2020 - JAN.2021)</li>
+                <li>     研鼎智能股份有限公司- 前端工程師(JUN. 2021 - )</li>
                 <li>前端:HTML5、CSS3、JavaScript、SCSS、JQuery、Bootstap</li>
                 <li>後端:Node.js、PHP</li>
                 <li>框架:React.js(HOOK)、Yii</li>
                 <li>可獨立切版、完成RWD網頁</li>
                 <li>資料庫:MySQL、pgSQL</li>
                 <li>軟體套件管理系統:npm 、yarn</li>
+                <li>Linux系統及Docker </li>
               </ul>
                  </p>
+                </div>
             <!-- <a class="btn btn-outline-secondary" href="#">請向下滑</a> -->
           </div>
-         
-            
-          </div>
+        </div>
           <div class="product-device shadow-sm d-none d-md-block"></div>
           <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+       
+        <h4>研鼎智能股份有限公司</h4>
+        <h4>參與專案</h4>
+        <div class=" row">
+          <div class="col-3">
+            <h5><a href="https://www.map8.zone/" target="_blank">map8官網</a></h5>
+            <img src="images/map8.jpg" class="mr-3 projectImg" alt="...">
+            <p>地圖平台前端功能維護</p>
+            <p>地圖平台新功能研發</p>
+            <p>資料視覺化、向量地圖運用功能</p>
+            <p>圖資運用、地理運算</p>
+            <p> 地點/門牌搜尋 API 介接</p>
+            <p>客製化專案</p>
+            </div>
+          <div class="col-3">
+            <h5> <a href="https://www.map8.zone/address-standardization/index.html" target="_blank">某公司內部地址正規化網頁</a></h5>
+            <img src="images/地址正規化系統.png" class="mr-3 projectImg" alt="...">
+            <p>串接地址正規化API</p>
+            <p>單筆或是批次輸出</p>
+            <p style="color:sienna;">*圖片與連結為示意畫面，非本案介面</p>
+          </div>
+            <div class="col-3">
+            <h5><a href="https://www.titic.cip.gov.tw/" target="_blank">原住民傳統智慧創作保護資訊網</a></h5>
+            <img src="images/原民會.jpg" class="mr-3 projectImg" alt="...">
+            <p>無障礙網頁</p>
+            <p>前後臺串聯</p>
+            <p>後臺系統</p>
+           </div>
+            <p></p>
+            <div class="col-3">           
+              <h5> <a href="https://househunt.land.gov.taipei/" target="_blank">台北找房+</a></h5>
+              <img src="images/地政局.jpg" class="mr-3 projectImg" alt="...">
+             
+
+            <p>部分項目切版</p>
+            </div>
         </div>
-      
-        <h4>資策會-期末專題製作</h4>
+
         <hr>
-      <ul class="list-unstyled">
+        <h4>資策會-期末專題製作</h4>
+      <ul class="list-unstyled col">
           <li class="media">
             <iframe  class="mr-3 img0" src="https://www.youtube.com/embed/r9vxH17hi1M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <div class="media-body">
@@ -131,75 +171,54 @@
           </li>
           <hr class="my-4">
         </ul>
-          <h4>HTML&CSS&RWD</h4>
-          <hr>
-        <ul class="list-unstyled">
-            <li class="media">
-              <img src="images/美髮網站切版.gif" class="mr-3 img0" alt="...">
-              <div class="media-body">
-                <h5 class="mt-0 mb-1">美髮網站切版(RWD)</h5>
-                運用HTML及CSS，進行RWD切版。
-               <a href="bootstrap & CSS/hairmap.com RWD.html"  target="_blank"> <button type="button" class="btn btn-secondary"  >前往網站</button></a>
+        <ul class="nav nav-tabs d-flex justify-content-center" role="tablist" id="tab" style="margin-top:30px;">
+          <li class="active">
+              <a href="#JQuery" data-toggle="tab" class="tabText" id="jquery_tab">
+                JQuery</a>
+          </li>
+          <li>
+              <a href="#RWD" data-toggle="tab" class="tabText" id="rwd_tab">
+                RWD</a>
+          </li>
+      </ul>
+      <div class="tab-content">
+          <!-- tab1 公告資訊 -->
+          <div class="tab-pane active" id="JQuery" align="center">
+              <div align="right">
+                  <button type="button" class=" btnstyle" id="carousel"><i
+                          class="fas fa-th-large btnicon"></i></button>
+                  <button type="button" class="btnstyle" id="list"><i class="fas fa-list btnicon"></i></button>
               </div>
-            </li>
-            <hr class="my-4">
-          </ul>
-        </div>
-        <div class="container">
-          <h4>bootstrap&RWD</h4>
-          <hr>
-        <ul class="list-unstyled">
-            <li class="media  ">
-              <img src="images/Bootstrap.gif" class="mr-3 img0" alt="...">
-              <div class="media-body">
-                <h5 class="mt-0 mb-1">網站切版(bootstrap)</h5>
-                運用bootstrap，進行切版。
-               <a href="bootstrap & CSS/bootstrap1.html"  target="_blank"> <button type="button" class="btn btn-secondary"  >前往網站</button></a>
+              <div class="carousel owl-stage-outer" id="jquery_carousel">
+                  <div class="owl-carousel owl-theme owl-stage" id="jqueryCarousel">
+                  </div>
+                  <div class="owl-nav row d-flex justify-content-center">
+                      <div class="owl-prev customPrevBtn"><i class="fas fa-chevron-left"></i></div>
+                      <div class="owl-next customNextBtn"><i class="fas fa-chevron-right"></i></div>
+                  </div>
               </div>
-            </li>
-            <hr class="my-4">
-          </ul>
-          <h4>JQuery</h4>
-          <hr>
-          <ul class="list-unstyled">
-              <li class="media  ">
-                <img src="images/翻牌遊戲.gif" class="mr-3 img0" alt="...">
-                <div class="media-body">
-                  <h5 class="mt-0 mb-1">翻牌配對遊戲(JQuery)</h5>
-                  運用click 改變class的樣式，呈現配對正確出現"恭喜!恭喜"提示，配對錯誤出現"再試試吧"。
-                 <a href="fllip-card.html"  target="_blank"> <button type="button" class="btn btn-secondary"  >前往網站</button></a>
+              <div class="totalList" style="display: none;" id="JQuerytotalList">
+            </div>
+          </div>
+          <div class="tab-pane" id="RWD" align="center">
+              <div align="right">
+                <button type="button" class=" btnstyle" id="rwdcarouselBtn"><i
+                        class="fas fa-th-large btnicon"></i></button>
+                <button type="button" class="btnstyle" id="rwdlistBtn"><i class="fas fa-list btnicon"></i></button>
+            </div>
+            <div class="carousel owl-stage-outer" id="rwd_carousel">
+                <div class="owl-carousel owl-theme owl-stage" id="RWDCarousel">
                 </div>
-              </li>
-              <hr class="my-4">
-              <li class="media  ">
-                <img src="images/手風琴動畫.gif" class="mr-3 img0" alt="...">
-                <div class="media-body">
-                  <h5 class="mt-0 mb-1">手風琴動畫(JQuery)</h5>
-                  用運click 改變class的樣式.active 及hover 。
-                 <a href="accordion.html"  target="_blank"> <button type="button" class="btn btn-secondary"  >前往網站</button></a>
+                <div class="owl-nav row d-flex justify-content-center">
+                    <div class="owl-prev customPrevBtn"><i class="fas fa-chevron-left"></i></div>
+                    <div class="owl-next customNextBtn"><i class="fas fa-chevron-right"></i></div>
                 </div>
-              </li>
-              <hr class="my-4">
-              <li class="media  ">
-                <img src="images/我的調色盤.gif" class=" mr-3 img0" alt="...">
-                <div class="media-body">
-                  <h5 class="mt-0 mb-1">我的調色盤(JQuery)</h5>
-                  用運click 改變class的樣式，感應所選顏色
-                  <a href="color.html"  target="_blank"> <button type="button" class="btn btn-secondary"  >前往網站</button></a>
-                </div>
-              </li>
-              <hr class="my-4">
-              <li class="media  ">
-                <img src="images/購物車價格加總.gif" class=" mr-3 img0" alt="...">
-                <div class="media-body">
-                  <h5 class="mt-0 mb-1">購物車價格加總及視窗進度條(JQuery)</h5>
-                  用運scrollTop，取得目前在視窗的位置，運用keyup及find 取得水果價格，並進行加總。
-                  <a href="scroll_cart.html"  target="_blank"> <button type="button" class="btn btn-secondary"  >前往網站</button></a>
-                </div>
-              </li>
-            </ul>
-          </div>  
+            </div>
+            <div class="totalList" style="display: none;" id="rwdtotalList">
+            </div>
+          </div>
         </div>
+      </div>
     </article>
 
     <footer class="container">
@@ -215,5 +234,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./owlcarousel/owl.carousel.min.js"></script>
+        <script src="./js/new.js"></script>
   </body>
 </html>
