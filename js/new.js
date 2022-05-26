@@ -64,28 +64,28 @@ var rwdinnerHtml =
 $("#RWDCarousel")[0].innerHTML = rwdinnerHtml;
 var JQueryListHtml=
 '<div class="listCard row">'+
-'<img class="listCardImg" src="../images/翻牌遊戲.gif" alt="">' +
+'<img class="listCardImg" src="images/翻牌遊戲.gif" alt="">' +
 '<div class="listCardContent">'+
     '<div class="listCardtitle">翻牌配對遊戲</div>'+
    '<p>運用click 改變class的樣式，呈現配對正確出現恭喜!恭喜提示，配對錯誤出現再試試吧。</p>' +
 '</div>'+
 '</div>'+
 '<div class="listCard row">'+
-'<img class="listCardImg" src="../images/手風琴動畫.gif" alt="">' +
+'<img class="listCardImg" src="images/手風琴動畫.gif" alt="">' +
 '<div class="listCardContent">'+
     '<div class="listCardtitle">手風琴動畫</div>'+
    '<p>用運click 改變class的樣式.active 及hover 。</p>' +
 '</div>'+
 '</div>'+
 '<div class="listCard row">'+
-'<img class="listCardImg" src="../images/我的調色盤.gif" alt="">' +
+'<img class="listCardImg" src="images/我的調色盤.gif" alt="">' +
 '<div class="listCardContent">'+
     '<div class="listCardtitle">我的調色盤</div>'+
    '<p>用運click 改變class的樣式，感應所選顏色。</p>' +
 '</div>'+
 '</div>'+
 '<div class="listCard row">'+
-'<img class="listCardImg" src="../images/購物車價格加總.gif" alt="">' +
+'<img class="listCardImg" src="images/購物車價格加總.gif" alt="">' +
 '<div class="listCardContent">'+
     '<div class="listCardtitle">購物車價格加總及視窗進度條</div>'+
    '<p>用運scrollTop，取得目前在視窗的位置，運用keyup及find 取得水果價格，並進行加總。</p>' +
@@ -96,14 +96,14 @@ $("#JQuerytotalList")[0].innerHTML = JQueryListHtml;
 
 var RwdListHtml=
 '<div class="listCard row">'+
-'<img class="listCardImg" src="../images/美髮網站切版.gif" alt="">' +
+'<img class="listCardImg" src="images/美髮網站切版.gif" alt="">' +
 '<div class="listCardContent">'+
     '<div class="listCardtitle">美髮網站切版</div>'+
    '<p>運用HTML及CSS，進行RWD切版。</p>' +
 '</div>'+
 '</div>'+
 '<div class="listCard row">'+
-'<img class="listCardImg" src="../images/Bootstrap.gif" alt="">' +
+'<img class="listCardImg" src="images/Bootstrap.gif" alt="">' +
 '<div class="listCardContent">'+
     '<div class="listCardtitle">網站切版</div>'+
    '<p>運用bootstrap，進行切版。</p>' +
