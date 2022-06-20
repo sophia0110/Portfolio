@@ -159,21 +159,3 @@ owl.owlCarousel({
     },
   },
 });
-
-{/* <div class="listCard row">
-<img class="listCardImg" src="" alt="">
-<div class="listCardContent">
-    <div class="listCardtitle">推動原民會</div>
-    <p>2021/11/22</p>
-    <p>推動原民會推動原民會推動原民會推動原民會推動原民會推動原民會推動..............</p>
-</div>
-</div>
-<div class="listCard row">
-<img class="listCardImg" src="" alt="">
-
-<div class="listCardContent">
-    <div class="listCardtitle">推動原民會</div>
-    <p>2021/11/22</p>
-    <p>推動原民會..............</p>
-</div>
-</div> */}
